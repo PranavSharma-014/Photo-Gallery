@@ -1,0 +1,18 @@
+
+.container{
+  width: 100%;
+  display: flex;
+}
+#nav{
+  text-transform: uppercase;
+  font-family:sans-serif;
+  font-size:1rem;
+}
+#nav img{
+  width:180px;
+}
+#nav .text{
+  text-decoration: none;
+  margin:0%;
+  padding:0%;  
+}
