@@ -14,6 +14,8 @@ function loadimg() {
       const response = JSON.parse(xhr.responseText);
       data = response;
 
+      console.log(data)
+
       renderData();
     }
   };
@@ -27,7 +29,7 @@ function renderData() {
   let template = "";
   for (let i = 0; i < 18; i++) {
     template += `
-                <div class="card m-2" style="width: 18rem">
+                <div class="card m-2" style="width: 18rem; cursor: pointer"  data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateModalImage('${data[i].url}')">
                 <img src="${data[i].thumbnailUrl}" class="card-img-top" alt="..." />
                 <div class="card-body">
                   <p class="card-text">
@@ -50,10 +52,16 @@ function postImage() {
     {
       title: title,
       thumbnailUrl: thumbnailUrl,
-      imageUrl: imageUrl,
+      url: imageUrl,
     },
     ...data,
   ];
 
   renderData();
+}
+
+
+function updateModalImage(url){
+    const modalImage = document.getElementById('modalImage');
+    modalImage.setAttribute('src', url)
 }
