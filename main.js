@@ -25,7 +25,7 @@ loadimg();
 
 function renderData() {
   let template = "";
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 18; i++) {
     template += `
                 <div class="card m-2" style="width: 18rem">
                 <img src="${data[i].thumbnailUrl}" class="card-img-top" alt="..." />
