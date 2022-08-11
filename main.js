@@ -65,3 +65,16 @@ function updateModalImage(url){
     const modalImage = document.getElementById('modalImage');
     modalImage.setAttribute('src', url)
 }
+
+
+
+
+
+
+
+
+
+
+
+
+// Created by Pranav Sharma.
